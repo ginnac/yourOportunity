@@ -19,14 +19,6 @@
 //or
 Route::get('/', 'HomeController@index');
 
-
-
-
-Route::get('/test', function () {
-    return view('test',[
-        'type' => 'administrator',
-        'name' => 'user'
-    ]);
-});
+Route::get('/dashboard', 'DashboardController@index');
 
 
