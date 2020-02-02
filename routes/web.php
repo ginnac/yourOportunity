@@ -11,14 +11,22 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+//notes-//routes can be post, put, delete, get, any 
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+//or
+Route::get('/', 'HomeController@index');
+
+
+
+
+Route::get('/test', function () {
+    return view('test',[
+        'type' => 'administrator',
+        'name' => 'user'
+    ]);
 });
 
 
-Route::get('/user', function () {
-    return [
-        'nombre' => 'user',
-        'type' => 'administrator'
-    ];
-});

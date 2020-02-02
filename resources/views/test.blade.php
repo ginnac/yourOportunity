@@ -89,6 +89,7 @@
                   {{'Bienvenido Amigo!'}}
 
                 @endisset
+
                 </div>
 
                 <div class="links">
