@@ -15,7 +15,9 @@ class ContactRequestReportController extends Controller
     public function index()
     {
         //show all data
-        return ContactRequestReport::all();
+        return view('contactRequestReports.index', 
+        ['contactRequests'=>ContactRequestReport::all()]
+    );
     }
 
     /**

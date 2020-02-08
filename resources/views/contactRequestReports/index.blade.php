@@ -82,26 +82,20 @@
             <div class="content">
                 <div class="title m-b-md">
 
-                @isset($name)
-                    Hello {{$name}}
-                
-                @else
-                  {{'Bienvenido Amigo!'}}
-
-                @endisset
-
+                    <div class="row"></div>
+                        <div class="col"></div>
+                            <h5>Contact Requests</h5>
+                                <table class="table">
+                                    @foreach($contactRequests as $contactRequest)
+                                    <tr>
+                                        <td>{{$contactRequest->name}}</td>
+                                    </tr> 
+                                    @endforeach
+                                </table>
+                           
                 </div>
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+               
             </div>
         </div>
     </body>
