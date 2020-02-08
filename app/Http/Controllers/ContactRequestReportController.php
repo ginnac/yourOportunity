@@ -67,7 +67,12 @@ class ContactRequestReportController extends Controller
      */
     public function edit($id)
     {
-        //
+        //show the edit page
+
+        $report = ContactRequestReport::find($id);
+        return view('contactRequestReports.edit',[
+            'report' => $report
+        ]);
     }
 
     /**
@@ -80,6 +85,7 @@ class ContactRequestReportController extends Controller
     public function update(Request $request, $id)
     {
         //
+        dd('put update');
     }
 
     /**
