@@ -22,3 +22,4 @@ Route::get('/', 'HomeController@index');
 Route::get('/dashboard', 'DashboardController@index');
 
 
+Route::resource('/contact_request_reports', 'ContactRequestReportController');
