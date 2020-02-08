@@ -41,6 +41,11 @@ class ContactRequestReportController extends Controller
     public function store(Request $request)
     {
         //
+        $report = new ContactRequestReport();
+        $report->name =$request->get('name');
+        $report->save();
+
+        return redirect('/contact_request_reports');
     }
 
     /**

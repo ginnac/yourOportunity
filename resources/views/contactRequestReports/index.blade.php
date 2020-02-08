@@ -20,6 +20,7 @@
                                 @foreach($contactRequests as $contactRequest)
                                     <tr>
                                         <td>{{$contactRequest->name}}</td>
+                                        <td><a href="/contact_request_reports/{{$contactRequest->id}}/edit">Edit</a></td>
                                     </tr> 
                                 @endforeach
                             </table>
