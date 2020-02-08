@@ -27,7 +27,9 @@ class ContactRequestReportController extends Controller
      */
     public function create()
     {
-        //
+        //create a new form
+        return view('contactRequestReports.create');
+
     }
 
     /**
