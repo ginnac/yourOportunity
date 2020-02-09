@@ -15,7 +15,7 @@ class CreateContactAttemptNotesTable extends Migration
     {
         Schema::create('contact_attempt_notes', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedInteger('contact_request_id');
+            $table->unsignedInteger('contact_request_report_id');
             $table->text('Notes');
             $table->text('by_user');
             $table->timestamps();

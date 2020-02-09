@@ -16,7 +16,16 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                           
+                           <h3>Details</h3>
+                            <table class="table">
+                                @foreach($report->contactAttemptNotes as $contactAttemptNote)
+                                    <tr>
+                                        <td>{{$contactAttenptNote->Notes}}</td>
+                                        <td>{{$contactAttenptNote->by_user}}</td>
+                                        <td>{{$contactAttenptNote->created_at}}</td>
+                                    </tr>
+                                @endforeach
+                            </table>
                         </div>
                     </div>
                             
