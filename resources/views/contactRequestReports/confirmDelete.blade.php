@@ -17,7 +17,7 @@
                     <div class="row">
                         <div class="col">
                             <table class="table">
-                                <form action="/contact_request_reports" method="POST">
+                                <form action="/contact_request_reports/{{$report->id}}" method="POST">
                                     @csrf
                                     @method('delete')
                                     <button type="submit" class="btn btn-primary">Delete</button>

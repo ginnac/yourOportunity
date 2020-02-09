@@ -69,7 +69,7 @@ class ContactRequestReportController extends Controller
     {
         //show the edit page
 
-        $report = ContactRequestReport::find($id);
+        $report = ContactRequestReport::findOrFail($id);
         return view('contactRequestReports.edit',[
             'report' => $report
         ]);
@@ -102,12 +102,16 @@ class ContactRequestReportController extends Controller
     public function destroy($id)
     {
         //
+        $report = ContactRequestReport::find($id);
+        $report->delete();
+
+        return redirect('/contact_request_reports');
     }
 
 
     public function confirmDelete($id)
     {
-        $report = ContactRequestReport::find($id);
+        $report = ContactRequestReport::findOrFail($id);
        return view('contactRequestReports.confirmDelete',[
            'report'=>$report
        ]);
