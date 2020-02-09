@@ -20,9 +20,9 @@
                             <table class="table">
                                 @foreach($report->contactAttemptNotes as $contactAttemptNote)
                                     <tr>
-                                        <td>{{$contactAttenptNote->Notes}}</td>
-                                        <td>{{$contactAttenptNote->by_user}}</td>
-                                        <td>{{$contactAttenptNote->created_at}}</td>
+                                        <td>{{$contactAttemptNote->Notes}}</td>
+                                        <td>{{$contactAttemptNote->by_user}}</td>
+                                        <td>{{$contactAttemptNote->created_at}}</td>
                                     </tr>
                                 @endforeach
                             </table>
