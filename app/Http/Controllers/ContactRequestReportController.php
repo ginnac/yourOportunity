@@ -84,8 +84,13 @@ class ContactRequestReportController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
-        dd('put update');
+        //this function can be used to make changes to DB make them persistent 
+        
+        $report = ContactRequestReport::find($id);
+        $report->name =$request->get('name');
+        $report->save();
+
+        return redirect('/contact_request_reports');
     }
 
     /**
@@ -98,4 +103,14 @@ class ContactRequestReportController extends Controller
     {
         //
     }
+
+
+    public function confirmDelete($id)
+    {
+        dd('delete ' .$id);
+    }
+
+
+    
+
 }

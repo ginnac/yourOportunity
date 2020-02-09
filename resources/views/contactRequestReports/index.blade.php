@@ -21,6 +21,7 @@
                                     <tr>
                                         <td>{{$contactRequest->name}}</td>
                                         <td><a href="/contact_request_reports/{{$contactRequest->id}}/edit">Edit</a></td>
+                                        <td><a href="/contact_request_reports/{{$contactRequest->id}}/confirmDelete">Delete</a></td> 
                                     </tr> 
                                 @endforeach
                             </table>

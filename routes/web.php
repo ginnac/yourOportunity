@@ -23,3 +23,5 @@ Route::get('/dashboard', 'DashboardController@index');
 
 
 Route::resource('/contact_request_reports', 'ContactRequestReportController');
+
+Route::get('/contact_request_reports/{id}/confirmDelete', 'ContactRequestReportController@confirmDelete');
