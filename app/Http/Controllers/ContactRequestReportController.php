@@ -107,7 +107,10 @@ class ContactRequestReportController extends Controller
 
     public function confirmDelete($id)
     {
-        dd('delete ' .$id);
+        $report = ContactRequestReport::find($id);
+       return view('contactRequestReports.confirmDelete',[
+           'report'=>$report
+       ]);
     }
 
 
