@@ -57,13 +57,19 @@ class ContactRequestReportController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
+     * @param ContactRequestReport $contactRequestReport
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(ContactRequestReport $contactRequestReport)
     {
         //show 1 contact information
 
-        
+       // $report = ContactRequestReport::findOrFail($id);
+        return view('contactRequestReports.show',[
+            'report' => $contactRequestReport
+        ]);
+
+
     }
 
     /**
