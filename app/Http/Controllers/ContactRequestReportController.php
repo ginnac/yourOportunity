@@ -40,7 +40,11 @@ class ContactRequestReportController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //validate tp not show data
+
+        $validaData =$request->validate([
+            'name' => 'required'
+        ]);       
         $report = new ContactRequestReport();
         $report->name =$request->get('name');
         $report->save();
