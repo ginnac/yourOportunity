@@ -61,7 +61,9 @@ class ContactRequestReportController extends Controller
      */
     public function show($id)
     {
-        //
+        //show 1 contact information
+
+        
     }
 
     /**
