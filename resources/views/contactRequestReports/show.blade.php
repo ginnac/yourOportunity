@@ -27,13 +27,13 @@
                                 @endforeach
                             </table>
                         </div>
-                        <div class="row">
+                       
+                    </div>
+                    <div class="row">
                             <div class="col">
                                 <a class='btn btn-primary' href="/contact_request_reports/{{$report->id}}/notes/create">New Note</a>
                             </div>
                         </div>
-                    </div>
-                            
                                 
                            
 </div>
