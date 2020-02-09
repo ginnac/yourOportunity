@@ -32,7 +32,7 @@
                                     @csrf
                                     <div class="form-group">
                                         <label for="name">Name:</label>
-                                        <input type="text" class=form-control id="name" name="name" placeholder="Type Contact Name">
+                                        <input type="text" value="{{old('name')}}" class=form-control id="name" name="name" placeholder="Type Contact Name">
                                     </div>
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>
