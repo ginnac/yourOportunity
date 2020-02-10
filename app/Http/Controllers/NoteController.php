@@ -38,8 +38,15 @@ class NoteController extends Controller
     public function store(Request $request, ContactRequestReport $contactRequestReport )
     {
         //
+        $contactAttemptNote = new ContactAttemptNote();
+        $contactAttemptNote->Notes = $request->get('Notes');
+        $contactAttemptNote->by_user= $request->get('by_user');
+        $contactAttemptNote->contact_request_report_id = $contactRequestReport->id;
+        $contactAttemptNote->save();
 
-        dd($request->all());
+        return redirect('/contact_request_reports/'.$contactRequestReport->id);
+
+        //dd($request->all());
     }
 
     /**
