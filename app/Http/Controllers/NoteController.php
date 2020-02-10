@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\{ContactRequestReport, ContactAttemptNote};
 use Illuminate\Http\Request;
 
 class NoteController extends Controller
@@ -18,12 +18,15 @@ class NoteController extends Controller
 
     /**
      * Show the form for creating a new resource.
-     *
+     * @param ContactRequestReport
      * @return \Illuminate\Http\Response
+     * 
      */
-    public function create()
+    public function create(ContactRequestReport $contactRequestReport)
     {
-        //
+        return view('contactAttemptNotes.create',[
+            'report'=> $contactRequestReport
+        ]);
     }
 
     /**
@@ -32,9 +35,11 @@ class NoteController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, ContactRequestReport $contactRequestReport )
     {
         //
+
+        dd($request->all());
     }
 
     /**
