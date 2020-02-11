@@ -16,6 +16,11 @@
                     </div>
                     <div class="row">
                         <div class="col">
+                            <a class='btn btn-secondary' href="/contact_request_reports/{{$report->id}}/confirmSendEmail">Send Contact Details Email</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
                            <h3>Details</h3>
                             <table class="table">
                                 @foreach($report->contactAttemptNotes as $contactAttemptNote)
