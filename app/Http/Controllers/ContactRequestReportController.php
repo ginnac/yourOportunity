@@ -145,9 +145,9 @@ class ContactRequestReportController extends Controller
 
     public function sendMail(Request $request, $id)
     {
-        $report = ContactRequestReport::findOrFail($id);
-       mail::to($request->get('email'))->send(new SummaryReport($report));
-        return redirect('/contact_request_report/' . $id);
+        $report = ContactRequestReport::find($id);
+        Mail::to($request->get('email'))->send(new SummaryReport($report));
+        return redirect('/contact_request_reports/' . $id);
     }
 
     
