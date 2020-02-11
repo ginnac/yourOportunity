@@ -131,6 +131,15 @@ class ContactRequestReportController extends Controller
     }
 
 
+    public function confirmSendMail($id)
+    {
+        $report = ContactRequestReport::findOrFail($id);
+       return view('contactRequestReports.confirmSendmail',[
+           'report'=>$report
+       ]);
+    }
+
+
     
 
 }

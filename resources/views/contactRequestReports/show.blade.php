@@ -16,7 +16,7 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <a class='btn btn-secondary' href="/contact_request_reports/{{$report->id}}/confirmSendEmail">Send Contact Details Email</a>
+                            <a class='btn btn-primary' href="/contact_request_reports/{{$report->id}}/confirmSendMail">Send Contact Details Email</a>
                         </div>
                     </div>
                     <div class="row">
