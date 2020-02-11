@@ -1,9 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Http\Request;
+
 use App\ContactRequestReport;
 
-use Illuminate\Http\Request;
+//email ----
+use App\Mail\SummaryReport;
+use Illuminate\Support\Facades\Mail;
 
 class ContactRequestReportController extends Controller
 {
@@ -139,10 +143,11 @@ class ContactRequestReportController extends Controller
        ]);
     }
 
-    public function sendMail($id)
+    public function sendMail(Request $request, $id)
     {
         $report = ContactRequestReport::findOrFail($id);
-       return $report;
+       mail::to($request->get('email'))->send(new SummaryReport($report));
+        return redirect('/contact_request_report/' . $id);
     }
 
     
