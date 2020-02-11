@@ -139,6 +139,11 @@ class ContactRequestReportController extends Controller
        ]);
     }
 
+    public function sendMail($id)
+    {
+        $report = ContactRequestReport::findOrFail($id);
+       return $report;
+    }
 
     
 
