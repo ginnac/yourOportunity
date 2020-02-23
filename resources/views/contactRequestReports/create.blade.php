@@ -1,4 +1,4 @@
-@extends('layouts.base')
+@extends('layouts.app')
 
 @section('content')
 
@@ -14,7 +14,7 @@
                             <a class='btn btn-secondary' href="/contact_request_reports">Back to Contact Requests Reports</a>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row mt-4">
                         <div class="col">
                             @if($errors->any())
                             <div class="alert alert-danger">
@@ -33,6 +33,16 @@
                                     <div class="form-group">
                                         <label for="name">Name:</label>
                                         <input type="text" value="{{old('name')}}" class=form-control id="name" name="name" placeholder="Type Contact Name">
+                                        
+                                        <label class="mt-3" for="email">Email:</label>
+                                        <input type="text" value="{{old('email')}}" class=form-control id="email" name="email" placeholder="Type Contact Email">
+
+                                        <label class="mt-3" for="phone_number">Phone Number:</label>
+                                        <input type="text" value="{{old('phone_number')}}" class=form-control id="phone_number" name="phone_number" placeholder="Type Contact Phone Number">
+
+                                        <label class="mt-3" for="comments">Comments:</label>
+                                        <input type="text" value="{{old('comments')}}" class=form-control id="comments" name="comments" placeholder="Type Comments">
+
                                     </div>
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>
