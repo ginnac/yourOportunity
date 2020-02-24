@@ -42,7 +42,8 @@
 
                                         <label  for="comments">Comments:</label>
                                         <input type="text" value="{{old('comments')}}" class=form-control id="comments" name="comments" placeholder="Type Comments">
-
+                                        
+                                        <input type="text" class="form-control" id="source" name="source" value="{{Auth::user()->name}}" hidden> Created by {{ Auth::user()->name }} </input>
                                     </div>
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>

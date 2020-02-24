@@ -53,9 +53,10 @@ class ContactRequestReportController extends Controller
 
         $validData =$request->validate([
             'name' => 'required|min:3',
-            'email' => 'required|min:3',
-            'phone_number' => 'required|min:3',
-            'comments' => 'required|min:3'
+            'email' => 'required|email:rfc,dns|unique:contact_request_reports,email',
+            'phone_number' => 'required|min:10',
+            'comments' => 'required|min:3',
+            'source'=> 'required'
 
         ]);       
         $report = new ContactRequestReport();
@@ -64,6 +65,7 @@ class ContactRequestReportController extends Controller
         $report->email=$validData['email'];
         $report->phone_number=$validData['phone_number'];
         $report->comments=$validData['comments'];
+        $report->source=$validData['source'];
         $report->save();
 
         return redirect('/contact_request_reports');
