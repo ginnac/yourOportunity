@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.base')
 
 @section('content')
 
@@ -34,13 +34,13 @@
                                         <label for="name">Name:</label>
                                         <input type="text" value="{{old('name')}}" class=form-control id="name" name="name" placeholder="Type Contact Name">
                                         
-                                        <label class="mt-3" for="email">Email:</label>
-                                        <input type="text" value="{{old('email')}}" class=form-control id="email" name="email" placeholder="Type Contact Email">
+                                        <label for="email">Email:</label>
+                                        <input type="email" value="{{old('email')}}" class=form-control id="email" name="email" placeholder="Type Contact Email">
 
-                                        <label class="mt-3" for="phone_number">Phone Number:</label>
-                                        <input type="text" value="{{old('phone_number')}}" class=form-control id="phone_number" name="phone_number" placeholder="Type Contact Phone Number">
+                                        <label  for="phone_number">Phone Number:</label>
+                                        <input type="number" value="{{old('phone_number')}}" class=form-control id="phone_number" name="phone_number" placeholder="Type Contact Phone Number">
 
-                                        <label class="mt-3" for="comments">Comments:</label>
+                                        <label  for="comments">Comments:</label>
                                         <input type="text" value="{{old('comments')}}" class=form-control id="comments" name="comments" placeholder="Type Comments">
 
                                     </div>

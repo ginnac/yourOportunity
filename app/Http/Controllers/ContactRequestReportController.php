@@ -52,11 +52,18 @@ class ContactRequestReportController extends Controller
         //validate tp not show data
 
         $validData =$request->validate([
-            'name' => 'required|min:3'
+            'name' => 'required|min:3',
+            'email' => 'required|min:3',
+            'phone_number' => 'required|min:3',
+            'comments' => 'required|min:3'
+
         ]);       
         $report = new ContactRequestReport();
         //$report->name =$request->get('name');
-        $report->name =$validData['name'];
+        $report->name=$validData['name'];
+        $report->email=$validData['email'];
+        $report->phone_number=$validData['phone_number'];
+        $report->comments=$validData['comments'];
         $report->save();
 
         return redirect('/contact_request_reports');
