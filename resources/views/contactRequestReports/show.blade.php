@@ -56,11 +56,17 @@
                         <div class="col">
                            <h3>Contact Notes</h3>
                             <table class="table">
+
+                                    <tr>
+                                        <th>Note</th>
+                                        <th>Entered by</th>
+                                        <th>Created on</th>
+                                    </tr>
                                 @foreach($report->contactAttemptNotes as $contactAttemptNote)
                                     <tr>
                                         <td>{{$contactAttemptNote->Notes}}</td>
                                         <td>{{$contactAttemptNote->by_user}}</td>
-                                        <td>{{$contactAttemptNote->created_at}}</td>
+                                        <td>{{($contactAttemptNote->created_at)->format('l jS \\of F Y h:i:s A')}}</td>
                                     </tr>
                                 @endforeach
                             </table>

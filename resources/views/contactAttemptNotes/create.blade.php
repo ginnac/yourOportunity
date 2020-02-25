@@ -34,8 +34,11 @@
                                         <label for="Notes">Notes:</label>
                                         <input type="text" value="{{old('Notes')}}" class=form-control id="Notes" name="Notes" placeholder="Type Notes">
 
-                                        <label for="by_user">User Name:</label>
-                                        <input type="text" value="{{old('by_user')}}" class=form-control id="by_user" name="by_user" placeholder="User Name">
+                                        <!-- <label for="by_user">User Name:</label>
+                                        <input type="text" value="{{old('by_user')}}" class=form-control id="by_user" name="by_user" placeholder="User Name"> -->
+
+                                        <input type="text" class="form-control" id="by_user" name="by_user" value="{{Auth::user()->name}}" hidden> Created by {{ Auth::user()->name }} </input>
+
                                     </div>
                                     <button type="submit" class="btn btn-primary">Submit</button>
                                 </form>
