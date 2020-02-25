@@ -17,8 +17,18 @@
                     <div class="row">
                         <div class="col">
                             <table class="table">
-                                @foreach($contactRequests as $contactRequest)
                                     <tr>
+                                        <th>Prospect ID</th>
+                                        <th>Name</th>  
+                                        <th>Edit</th>
+                                        <th>Delete</th>
+                                        
+                                    </tr>
+                                @foreach($contactRequests as $contactRequest)
+                                    
+                                    <tr>
+                                        
+                                        <td>{{$contactRequest->id}}</td>
                                         <td><a href="/contact_request_reports/{{$contactRequest->id}}">{{$contactRequest->name}}</a></td>
                                         <td><a href="/contact_request_reports/{{$contactRequest->id}}/edit">Edit</a></td>
                                         <td><a href="/contact_request_reports/{{$contactRequest->id}}/confirmDelete">Delete</a></td> 

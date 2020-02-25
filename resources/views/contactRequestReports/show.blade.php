@@ -21,7 +21,40 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                           <h3>Details</h3>
+                            <h3>Prospect Details</h3>
+                             <table class="table">
+                                <tr>
+                                    <td>Name: {{$report->name}}</td>
+                                </tr>
+                                <tr>
+                                    <td>ID#: {{$report->id}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Phone Number: {{$report->phone_number}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Email: {{$report->email}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Prospect Initial Comments: {{$report->comments}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Created by: {{$report->source}}</td>
+                                </tr>
+                                <tr>
+                                    <!-- <td>Created on/Last updated on: {{($report->created_at)->format('d/m/Y')}}/{{$report->updated_at}}</td> -->
+                                    <td>Created on: {{($report->created_at)->format('l jS \\of F Y h:i:s A')}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Last updated on: {{($report->updated_at)->format('l jS \\of F Y h:i:s A')}}</td>
+                                </tr>
+                             </table>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                           <h3>Contact Notes</h3>
                             <table class="table">
                                 @foreach($report->contactAttemptNotes as $contactAttemptNote)
                                     <tr>
