@@ -43,4 +43,6 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/opportunity', 'ProspectViewController@index');
 
+Route::post('/opportunity', 'ProspectViewController@store');
+
 

@@ -23,10 +23,21 @@
                             </div>
                             @endif
                         </div>
+                        <div class="col">
+                        @isset($results)
+                            <div class="alert alert-danger">
+                                <ul>
+                                    
+                                    <li>{{$results}}</li>
+                                   
+                                </ul>
+                            </div>
+                        @endisset
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <form action="/contact_request_reports" method="POST">
+                            <form action="/opportunity" method="POST">
                                     @csrf
                                     <div class="form-group">
                                         <label for="name">Name:</label>
