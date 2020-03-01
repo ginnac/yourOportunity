@@ -45,4 +45,7 @@ Route::get('/opportunity', 'ProspectViewController@index');
 
 Route::post('/opportunity', 'ProspectViewController@store');
 
+//text message routes
 
+Route::view('/textsms', 'textMessages.sms');
+Route::post('/textsms', 'smsController@sendSms');
