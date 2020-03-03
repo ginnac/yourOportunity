@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\ContactRequestReport;
 
 use Twilio\Rest\Client; 
 
@@ -18,6 +19,26 @@ class smsController extends Controller
 // Update the path below to your autoload.php, 
 // see https://getcomposer.org/doc/01-basic-usage.md 
 //require_once '/path/to/vendor/autoload.php'; 
+
+public function index()
+{
+    $contactRequests = ContactRequestReport::all();
+    $numberList = array();
+    foreach($contactRequests as $contactRequest){
+         $number=$contactRequest->phone_number;
+        array_push($numberList, $number);
+    }
+    $comma_separated_list = implode(",", $numberList);
+    //dd($comma_separated_list);
+    
+    
+    //show all data
+    return view('textMessages.sms', 
+    ['contactRequests'=>ContactRequestReport::all(),
+    'bulkNumbers'=>$comma_separated_list]
+);
+}
+
  
 
  

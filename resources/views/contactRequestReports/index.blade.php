@@ -2,6 +2,7 @@
 
 @section('content')
 
+
 <div class="title m-b-md">
 
                     <div class="row">
@@ -13,6 +14,9 @@
                         <div class="col">
                             <a class='btn btn-primary' href="/contact_request_reports/create">create a new contact</a>
                         </div>
+                        <div class="col">
+                            <a class='btn btn-primary' href="/textsms">Send Bulk Message</a>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col">
@@ -22,6 +26,7 @@
                                         <th>Name</th>  
                                         <th>Edit</th>
                                         <th>Delete</th>
+                                        <th>Phone Number</th>
                                     </tr>
                                 @foreach($contactRequests as $contactRequest)
                                     
@@ -30,6 +35,7 @@
                                         <td><a href="/contact_request_reports/{{$contactRequest->id}}">{{$contactRequest->name}}</a></td>
                                         <td><a href="/contact_request_reports/{{$contactRequest->id}}/edit">Edit</a></td>
                                         <td><a href="/contact_request_reports/{{$contactRequest->id}}/confirmDelete">Delete</a></td> 
+                                        <td value="{{$contactRequest->phone_number}}"> {{$contactRequest->phone_number}} </td>
                                     </tr> 
                                 @endforeach
                             </table>

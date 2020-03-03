@@ -14,7 +14,7 @@
         @endif
 
              <label>Phone numbers (seperate with a comma [,])</label>
-             <input type='text' name='numbers' />
+             <input type="text" name='numbers' value="{{$bulkNumbers}}" class=form-control id="numbers" name="numbers">
 
             <label>Message</label>
             <textarea name='message'></textarea>

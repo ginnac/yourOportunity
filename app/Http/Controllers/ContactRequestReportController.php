@@ -23,9 +23,20 @@ class ContactRequestReportController extends Controller
      */
     public function index()
     {
+        $contactRequests = ContactRequestReport::all();
+        $numberList = array();
+        foreach($contactRequests as $contactRequest){
+             $number=$contactRequest->phone_number;
+            array_push($numberList, $number);
+        }
+        $comma_separated_list = implode(",", $numberList);
+        //dd($comma_separated_list);
+        
+        
         //show all data
         return view('contactRequestReports.index', 
-        ['contactRequests'=>ContactRequestReport::all()]
+        ['contactRequests'=>ContactRequestReport::all(),
+        'bulkNumbers'=>$comma_separated_list]
     );
     }
 
