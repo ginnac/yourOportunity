@@ -51,8 +51,7 @@ Route::get('/textsms', 'smsController@index');
 Route::post('/textsms', 'smsController@sendSms');
 
 //
-Route::get('/test-email', 'JobController@sendEmails');
+Route::get('/sendEmails', 'JobController@sendEmails');
 
-// Route::get('/sendProspectsMail', [
-//     'uses'=> 'ProspectBulkMailController@sendEmails' ,
-//     'as' => 'sendPropectsMail ']);
+Route::get('/sendEmail', 'JobController@enqueue');
+
