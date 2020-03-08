@@ -49,3 +49,10 @@ Route::post('/opportunity', 'ProspectViewController@store');
 
 Route::get('/textsms', 'smsController@index');
 Route::post('/textsms', 'smsController@sendSms');
+
+//
+Route::get('/test-email', 'JobController@sendEmails');
+
+// Route::get('/sendProspectsMail', [
+//     'uses'=> 'ProspectBulkMailController@sendEmails' ,
+//     'as' => 'sendPropectsMail ']);

@@ -9,12 +9,27 @@ use App\Jobs\SendEmail;
 use App\Http\Controllers\Controller;
 
 use Carbon\Carbon;
+use App\ContactRequestReport;
 
 class JobController extends Controller
 {
+    //send bulk emails
+    public function sendEmails(Request $request){
+    
+            $prospects = ContactRequestReport::all();
+            foreach($prospects as $prospect){
+                $details = ['email' => $prospect->email];
+                    SendEmail::dispatch($details);
+                
+            }
+    
+     
+       } 
+   
+   
     //normal queue
     public function enqueue(Request $request)
-    {
+    {   
         $details = ['email' => 'recipient@example.com'];
         SendEmail::dispatch($details);
     }
@@ -33,4 +48,10 @@ class JobController extends Controller
     //     $details = ['email' => 'recipient@example.com'];
     //     SendEmail::dispatchNow($details);
     // }
+
+    //withchain to chain 1 job after another one
+    // SendEmail::withChain([
+    //     new VerificationEmail,
+    //     new WelcomeEmail
+    // ])->dispatch();
 }
