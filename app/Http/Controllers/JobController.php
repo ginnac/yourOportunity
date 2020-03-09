@@ -13,6 +13,24 @@ use App\ContactRequestReport;
 
 class JobController extends Controller
 {
+
+    public function index()
+    {
+        $contactRequests = ContactRequestReport::all();
+        // $numberList = array();
+        // foreach($contactRequests as $contactRequest){
+        //      $number=$contactRequest->phone_number;
+        //     array_push($numberList, $number);
+        // }
+        // $comma_separated_list = implode(",", $numberList);
+        //dd($comma_separated_list);
+        
+        
+        //show all data
+        return view('mail.bulkSending', 
+        ['contactRequests'=> $contactRequests,]
+    );
+    }
     //send bulk emails
     public function sendEmails(Request $request){
     
@@ -22,6 +40,12 @@ class JobController extends Controller
                     SendEmail::dispatch($details);
                 
             }
+
+            $queued = 'Bulk Emails has been added to email queue. Should have already been sent or is in the process to be sent.';
+            return view('mail.bulkSending', 
+            ['contactRequests'=> $prospects, 
+            'queued'=> $queued]
+        );
     
      
        } 

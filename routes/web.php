@@ -50,8 +50,9 @@ Route::post('/opportunity', 'ProspectViewController@store');
 Route::get('/textsms', 'smsController@index');
 Route::post('/textsms', 'smsController@sendSms');
 
-//
-Route::get('/sendEmails', 'JobController@sendEmails');
+//send bulk emails
+Route::get('/sendEmails', 'JobController@index');
+Route::post('/sendEmails', 'JobController@sendEmails');
 
 Route::get('/sendEmail', 'JobController@enqueue');
 

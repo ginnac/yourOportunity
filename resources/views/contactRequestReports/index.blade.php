@@ -17,6 +17,9 @@
                         <div class="col">
                             <a class='btn btn-primary' href="/textsms">Send Bulk Message</a>
                         </div>
+                        <div class="col">
+                            <a class='btn btn-primary' href="/sendEmails">Send Bulk Emails</a>
+                        </div>
                     </div>
                     <div class="row">
                         <div class="col">
