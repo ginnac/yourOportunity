@@ -36,6 +36,36 @@
                         </div>
                     </div>
 
+                    <!-- <div class="row">
+                        <div class="col">
+                        <h3>Build a Message</h3>
+                            
+                        <form action="/storeCookie" method='post'>
+                        @csrf
+                            @if($errors->any())
+                        <ul>
+                            @foreach($errors->all() as $error)
+                            <li> {{ $error }} </li>
+                            @endforeach
+                            @endif
+
+                        </ul>
+
+                            <label>Subject</label>
+                            <input type="text" name='subject'>
+
+                            <label>Message</label>
+                            <textarea name='message'></textarea>
+
+                            <button type='submit'>Save Message</button>
+                        </form>
+                        
+                        </form>
+                        </div>
+                    </div>
+                    
+                    </div> -->
+
                     <div class="row">
                     <div class="col">
                         <form action='' method='post'>
@@ -46,6 +76,8 @@
                             <li> {{ $error }} </li>
                             @endforeach
                             @endif
+
+                        </ul>
 
                         @if( session( 'success' ) )
                         {{ session( 'success' ) }}

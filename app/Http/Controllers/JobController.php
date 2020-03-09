@@ -49,6 +49,16 @@ class JobController extends Controller
     
      
        } 
+
+    // public function storeCookie(Request $request){
+    //     $message = $request->get('message');
+    //     setcookie('message', $message);
+    //     $prospects = ContactRequestReport::all();
+    //     return view('mail.bulkSending', 
+    //         ['contactRequests'=> $prospects, ]);
+
+
+    // }
    
    
     //normal queue

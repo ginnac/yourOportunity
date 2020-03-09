@@ -52,6 +52,7 @@ Route::post('/textsms', 'smsController@sendSms');
 
 //send bulk emails
 Route::get('/sendEmails', 'JobController@index');
+// Route::post('/storeCookie', 'JobController@storeCookie');
 Route::post('/sendEmails', 'JobController@sendEmails');
 
 Route::get('/sendEmail', 'JobController@enqueue');
