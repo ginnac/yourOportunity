@@ -25,6 +25,7 @@ class SendEmail implements ShouldQueue
     {
         //
         $this->details = $details;
+
     }
 
     /**
@@ -35,8 +36,8 @@ class SendEmail implements ShouldQueue
     public function handle()
     {
         //
-
-        $email = new EmailForQueuing();
+        
+        $email = new EmailForQueuing($this->details);
         Mail::to($this->details['email'])->send($email);
     }
 }

@@ -11,14 +11,17 @@ class EmailForQueuing extends Mailable
 {
     use Queueable, SerializesModels;
 
+    protected $details;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($details)
     {
         //
+        $this->details = $details;
     }
 
     /**
@@ -28,8 +31,8 @@ class EmailForQueuing extends Mailable
      */
     public function build()
     {
-        return $this->from('ginnacampbell1990@gmail.com', 'Mailtrap')
-            ->subject('Test Queued Email')
-            ->view('mail.email');
+        return $this->from('andrew.campbell801@live.com', 'Mailtrap')
+            ->subject($this->details['subject'])
+            ->view('mail.email', ['lol' => $this->details['message']]);
     }
 }

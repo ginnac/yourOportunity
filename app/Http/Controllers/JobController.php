@@ -42,29 +42,21 @@ class JobController extends Controller
             }
 
             $queued = 'Bulk Emails has been added to email queue. Should have already been sent or is in the process to be sent.';
-            return view('mail.bulkSending', 
-            ['contactRequests'=> $prospects, 
-            'queued'=> $queued]
-        );
+            // return view('mail.bulkSending', 
+            // ['contactRequests'=> $prospects, 
+            // 'queued'=> $queued]
+        //);
     
      
        } 
-
-    // public function storeCookie(Request $request){
-    //     $message = $request->get('message');
-    //     setcookie('message', $message);
-    //     $prospects = ContactRequestReport::all();
-    //     return view('mail.bulkSending', 
-    //         ['contactRequests'=> $prospects, ]);
-
-
-    // }
    
    
     //normal queue
     public function enqueue(Request $request)
     {   
-        $details = ['email' => 'recipient@example.com'];
+        $details = ['email' => 'recipient@example.com',
+        'subject' => 'Loca!!',
+        'message' => 'Familia'];
         SendEmail::dispatch($details);
     }
 
