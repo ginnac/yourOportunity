@@ -83,9 +83,12 @@
                         {{ session( 'success' ) }}
                         @endif
 
+                        <label>Subject</label>
+                        <input name='subject'></input>
+
                         <label>Message</label>
                         <textarea name='message'></textarea>
-
+                        
                         <button type='submit'>Send To All</button>
                         </form>
                         

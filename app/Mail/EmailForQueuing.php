@@ -31,7 +31,7 @@ class EmailForQueuing extends Mailable
      */
     public function build()
     {
-        return $this->from('andrew.campbell801@live.com', 'Mailtrap')
+        return $this->from('youroportunity@youroportunity.com', 'Mailtrap')
             ->subject($this->details['subject'])
             ->view('mail.email', ['lol' => $this->details['message']]);
     }

@@ -36,7 +36,10 @@ class JobController extends Controller
     
             $prospects = ContactRequestReport::all();
             foreach($prospects as $prospect){
-                $details = ['email' => $prospect->email];
+
+                $details = ['email' => $prospect->email,
+                'subject' => $request->get('subject'),
+                'message' => $request->get('message')];
                     SendEmail::dispatch($details);
                 
             }
@@ -54,7 +57,7 @@ class JobController extends Controller
     //normal queue
     public function enqueue(Request $request)
     {   
-        $details = ['email' => 'recipient@example.com',
+        $details = ['email' => 'andrew.campbell801@live.com',
         'subject' => 'Loca!!',
         'message' => 'Familia'];
         SendEmail::dispatch($details);

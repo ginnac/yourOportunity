@@ -4,6 +4,6 @@
 
 @section('content')
 
-<p>Nice!!! message!!! {{$lol}}</p>
+<p>{{$lol}}</p>
 
 @endsection
