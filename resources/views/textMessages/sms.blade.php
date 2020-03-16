@@ -1,5 +1,9 @@
-<html>
-      <body>
+
+@extends('layouts.base')
+
+@section('content')
+
+<div class="mt-5">
          <form action='' method='post'>
               @csrf
                       @if($errors->any())
@@ -21,5 +25,6 @@
 
             <button type='submit'>Send!</button>
       </form>
-    </body>
-</html>
+</div>
+
+@endsection
