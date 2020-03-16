@@ -10,7 +10,7 @@
 
     <title>Contact Requests Admin</title>
   </head>
-  <body>
+  <body class="bg-secondary text-white">
 
     <div class="container">
       @yield('content')

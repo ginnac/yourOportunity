@@ -12,14 +12,15 @@
                     </div>
                     <div class="row">
                         <div class="col">
-                            <a class='btn btn-primary' href="/contact_request_reports/create">create a new contact</a>
-                        </div>
-                        <div class="col">
-                            <a class='btn btn-primary' href="/textsms">Send Bulk Message</a>
+                            <a class='btn btn-primary' href="/contact_request_reports/create">Create A New Contact</a>
                         </div>
                         <div class="col">
                             <a class='btn btn-primary' href="/sendEmails">Send Bulk Emails</a>
                         </div>
+                        <div class="col">
+                            <a class='btn btn-primary' href="/textsms">Send Bulk Text Messages</a>
+                        </div>
+                        
                     </div>
                     <div class="row">
                         <div class="col">
