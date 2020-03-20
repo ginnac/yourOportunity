@@ -6,13 +6,13 @@
 <div class="mt-4 p-5 mb-5 bg-light text-dark border">
          <form action='' method='post' class="form-group">
               @csrf
-     @if($errors->any())
+        @if($errors->any())
          <ul class="text-danger">
-         @foreach($errors->all() as $error)
+           @foreach($errors->all() as $error)
             <li> {{ $error }} </li>
-             @endforeach
+           @endforeach
           </ul>
-     @endif
+        @endif
          
 
         <ul>

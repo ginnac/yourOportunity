@@ -14,7 +14,7 @@
 
                     <div class="row">
                         <div class="col">
-                            <h1>Email: To Prospects</h1>
+                            <h1 class="mt-2 float-right font-weight-bold">Send Emails To Prospects</h1>
                         </div>
                     </div>
                     <div class="row">
@@ -36,62 +36,60 @@
                         </div>
                     </div>
 
-                    <!-- <div class="row">
-                        <div class="col">
-                        <h3>Build a Message</h3>
-                            
-                        <form action="/storeCookie" method='post'>
-                        @csrf
-                            @if($errors->any())
-                        <ul>
-                            @foreach($errors->all() as $error)
-                            <li> {{ $error }} </li>
-                            @endforeach
-                            @endif
-
-                        </ul>
-
-                            <label>Subject</label>
-                            <input type="text" name='subject'>
-
-                            <label>Message</label>
-                            <textarea name='message'></textarea>
-
-                            <button type='submit'>Save Message</button>
-                        </form>
-                        
-                        </form>
-                        </div>
-                    </div>
-                    
-                    </div> -->
 
                     <div class="row">
                     <div class="col">
-                        <form action='' method='post'>
-                            @csrf
+                    
+                    <form action='' method='post'>
+                    <div class="row">
+                        
+                        @csrf
                             @if($errors->any())
-                        <ul>
-                            @foreach($errors->all() as $error)
-                            <li> {{ $error }} </li>
-                            @endforeach
+                                <ul class="text-danger">
+                                    @foreach($errors->all() as $error)
+                                        <li> {{ $error }} </li>
+                                    @endforeach
+                                </ul>
                             @endif
+         
 
-                        </ul>
+                            <ul>
+                                @if( session( 'success' ) )
+                                    <li class="text-success">
+                                        {{ session( 'success' ) }}
+                                    </li> 
+                                @endif
+                            </ul>
+                    </div>
 
-                        @if( session( 'success' ) )
-                        {{ session( 'success' ) }}
-                        @endif
-
-                        <label>Subject</label>
-                        <input name='subject'></input>
-
-                        <label>Message</label>
-                        <textarea name='message'></textarea>
                         
-                        <button type='submit'>Send To All</button>
-                        </form>
+                    <div class="row pr-5 pl-5 pt-3 pb-5 bg-secondary text-white border" >
                         
+                        <div class="w-100 mt-3"><h2>Build your Email</h2></div>
+                        
+                        <!-- <div class="row" class="w-100"> -->
+                            <label class="mt-3 font-weight-bold">Subject</label>
+                            <input class="w-100 form-control" name='subject'></input>
+                        <!-- </div> -->
+                        
+                        <!-- <div class="row"class="w-100" > -->
+                            <label class="mt-3 font-weight-bold">Message</label>
+                            <textarea class="w-100 form-control" name='message' rows="12"></textarea>
+                        <!-- </div> -->
+                        
+                        <div class="row mt-4 mb-3">
+               
+                        <div class="col">
+                            <button class="btn btn-primary font-weight-bold" type='submit' >Send Bulk Email</button>
+                        </div>
+
+               
+                        </div>
+                    
+                   
+                    </div>
+
+                    </form>   
                     </div>
                     </div>
 
