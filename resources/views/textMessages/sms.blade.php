@@ -23,7 +23,7 @@
         @endif
         </ul>
           
-          <h2>Bulk Send text Messages</h2>
+          <h2 class="font-weight-bold">Bulk Send text Messages</h2>
 
           <div class="col">
                <a class="btn btn-secondary float-right" href="/contact_request_reports">Cancel</a>

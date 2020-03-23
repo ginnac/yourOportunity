@@ -24,6 +24,14 @@
                                         <label class="font-weight-bold" for="name">Name:</label>
                                         <input type="text" class=form-control id="name" name="name" placeholder="Type Contact Name">
                                     </div>
+                                    <div class="form-group">
+                                        <label class="font-weight-bold" for="name">Name:</label>
+                                        <input type="text" class=form-control id="name" name="name" placeholder="Type Contact Name">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="font-weight-bold" for="name">Name:</label>
+                                        <input type="text" class=form-control id="name" name="name" placeholder="Type Contact Name">
+                                    </div>
                                     <button type="submit" class="btn btn-primary mt-2 font-weight-bold btnsize">Submit</button>
                                 </form>
                             </table>

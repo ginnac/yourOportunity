@@ -7,31 +7,33 @@
 
                     <div class="row">
                         <div class="col">
-                            <h1>Contact Requests</h1>
+                            <h1 class="font-weight-bold">Contact Lists</h1>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col">
-                            <a class='btn btn-primary' href="/contact_request_reports/create">Create A New Contact</a>
+                    <div class="mt-2 mb-4 d-flex flex-row-reverse">
+                        <div class="p-2">
+                            <a class='btn btn-primary btnsize' href="/contact_request_reports/create">Create A New Contact</a>
                         </div>
-                        <div class="col">
-                            <a class='btn btn-primary' href="/sendEmails">Send Bulk Emails</a>
+                        <div class="p-2">
+                            <a class='btn btn-primary btnsize' href="/sendEmails">Send Bulk Emails</a>
                         </div>
-                        <div class="col">
-                            <a class='btn btn-primary' href="/textsms">Send Bulk Text Messages</a>
+                        <div class="p-2">
+                            <a class='btn btn-primary btnsize' href="/textsms">Send Bulk Text Messages</a>
                         </div>
                         
                     </div>
-                    <div class="row">
+                    <div class="row mt-5 mb-5">
                         <div class="col">
-                            <table class="table">
+                            <table class="table table-hover table-responsive-sm">
+                                <thead class="thead-dark">
                                     <tr>
-                                        <th>Prospect ID</th>
-                                        <th>Name</th>  
-                                        <th>Edit</th>
-                                        <th>Delete</th>
-                                        <th>Phone Number</th>
+                                        <th scope="col">Prospect ID</th>
+                                        <th scope="col">Name</th>  
+                                        <th scope="col">Edit</th>
+                                        <th scope="col">Delete</th>
+                                        <th scope="col" class="">Phone Number</th>
                                     </tr>
+                                </thead>
                                 @foreach($contactRequests as $contactRequest)
                                     
                                     <tr>
@@ -39,7 +41,7 @@
                                         <td><a href="/contact_request_reports/{{$contactRequest->id}}">{{$contactRequest->name}}</a></td>
                                         <td><a href="/contact_request_reports/{{$contactRequest->id}}/edit">Edit</a></td>
                                         <td><a href="/contact_request_reports/{{$contactRequest->id}}/confirmDelete">Delete</a></td> 
-                                        <td value="{{$contactRequest->phone_number}}"> {{$contactRequest->phone_number}} </td>
+                                        <td class="" value="{{$contactRequest->phone_number}}"> {{$contactRequest->phone_number}} </td>
                                     </tr> 
                                 @endforeach
                             </table>
