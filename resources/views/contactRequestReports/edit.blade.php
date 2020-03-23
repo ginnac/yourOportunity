@@ -22,15 +22,15 @@
                                     @method('put')
                                     <div class="form-group">
                                         <label class="font-weight-bold" for="name">Name:</label>
-                                        <input type="text" class=form-control id="name" name="name" placeholder="Type Contact Name">
+                                        <input type="text" value="{{$report->name}}" class=form-control id="name" name="name" placeholder="Enter Contact's Name">
                                     </div>
                                     <div class="form-group">
-                                        <label class="font-weight-bold" for="name">Name:</label>
-                                        <input type="text" class=form-control id="name" name="name" placeholder="Type Contact Name">
+                                        <label class="font-weight-bold" for="phone_number">Phone Number:</label>
+                                        <input type="text" value="{{$report->phone_number}}" class=form-control id="phone_number" name="phone_number" placeholder="Enter Contact's Phone Number">
                                     </div>
                                     <div class="form-group">
-                                        <label class="font-weight-bold" for="name">Name:</label>
-                                        <input type="text" class=form-control id="name" name="name" placeholder="Type Contact Name">
+                                        <label class="font-weight-bold" for="email">Email:</label>
+                                        <input type="text" value="{{$report->email}}" class=form-control id="email" name="email" placeholder="Enter Contact's Email">
                                     </div>
                                     <button type="submit" class="btn btn-primary mt-2 font-weight-bold btnsize">Submit</button>
                                 </form>

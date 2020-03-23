@@ -130,6 +130,8 @@ class ContactRequestReportController extends Controller
         
         $report = ContactRequestReport::find($id);
         $report->name =$request->get('name');
+        $report->phone_number =$request->get('phone_number');
+        $report->email =$request->get('email');
         $report->save();
 
         return redirect('/contact_request_reports');
