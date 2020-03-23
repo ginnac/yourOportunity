@@ -31,7 +31,7 @@
 
           <label class="mt-4 font-weight-bold"> Sending to:</label>
           <input type="text" name='numbers' value="{{$bulkNumbers}}" class=form-control id="numbers" name="numbers" hidden>
-          <p>{{$bulkNumbers}}</p>
+          <p>{{$viewNumbers}}</p>
           </input> 
           
 

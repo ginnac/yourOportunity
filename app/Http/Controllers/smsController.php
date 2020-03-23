@@ -30,12 +30,14 @@ public function index()
     }
     $comma_separated_list = implode(",", $numberList);
     //dd($comma_separated_list);
+    $view_list=implode(", ", $numberList);
     
     
     //show all data
     return view('textMessages.sms', 
     ['contactRequests'=>ContactRequestReport::all(),
-    'bulkNumbers'=>$comma_separated_list]
+    'bulkNumbers'=>$comma_separated_list,
+    'viewNumbers'=>$view_list]
 );
 }
 

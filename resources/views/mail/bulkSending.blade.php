@@ -14,17 +14,19 @@
 
                     <div class="row">
                         <div class="col">
-                            <h1 class="mt-2 float-right font-weight-bold">Send Emails To Prospects</h1>
+                            <h1 class="mt-2 float-right font-weight-bold">Send Email To Prospects</h1>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col">
-                            <table class="table">
+                            <table class="table table-hover table-responsive-sm">
+                                <thead class="thead-dark">
                                     <tr>
-                                        <th>id#</th>
-                                        <th>Name</th>
-                                        <th>Email</th>
+                                        <th scope="col">id#</th>
+                                        <th scope="col"> Name</th>
+                                        <th scope="col">Email</th>
                                     </tr>
+                                </thead>
                                 @foreach($contactRequests as $contactRequest)  
                                     <tr>
                                         <td><a href="/contact_request_reports/{{$contactRequest->id}}">{{$contactRequest->id}}</a></td>
@@ -68,12 +70,12 @@
                         <div class="w-100 mt-3"><h2>Build your Email</h2></div>
                         
                         <!-- <div class="row" class="w-100"> -->
-                            <label class="mt-3 font-weight-bold">Subject</label>
+                            <label class="mt-3">Subject</label>
                             <input class="w-100 form-control" name='subject'></input>
                         <!-- </div> -->
                         
                         <!-- <div class="row"class="w-100" > -->
-                            <label class="mt-3 font-weight-bold">Message</label>
+                            <label class="mt-3">Message</label>
                             <textarea class="w-100 form-control" name='message' rows="12"></textarea>
                         <!-- </div> -->
                         
