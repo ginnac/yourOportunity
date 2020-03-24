@@ -50,8 +50,6 @@ class JobController extends Controller
             // ['contactRequests'=> $prospects, 
             // 'queued'=> $queued]
         //);
-
-        redirect('/sendEmails');
     
      
        } 
