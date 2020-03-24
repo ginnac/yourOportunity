@@ -33,6 +33,6 @@ class EmailForQueuing extends Mailable
     {
         return $this->from('youroportunity@youroportunity.com', 'Opportunity!')
             ->subject($this->details['subject'])
-            ->view('mail.email', ['details' => $this->details['message']]);
+            ->view('mail.email', ['messageDetails' => $this->details['message']]);
     }
 }
