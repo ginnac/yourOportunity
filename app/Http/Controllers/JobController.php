@@ -44,11 +44,14 @@ class JobController extends Controller
                 
             }
 
+
             $queued = 'Bulk Emails has been added to email queue. Should have already been sent or is in the process to be sent.';
             // return view('mail.bulkSending', 
             // ['contactRequests'=> $prospects, 
             // 'queued'=> $queued]
         //);
+
+        redirect('/sendEmails');
     
      
        } 
