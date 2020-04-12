@@ -57,3 +57,4 @@ Route::post('/sendEmails', 'JobController@sendEmails');
 
 Route::get('/sendEmail', 'JobController@enqueue');
 
+Route::get('/emailConfirmation', 'JobController@confirmationPage');

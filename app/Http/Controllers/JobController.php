@@ -45,13 +45,13 @@ class JobController extends Controller
             }
 
 
-            $queued = 'Bulk Emails has been added to email queue. Should have already been sent or is in the process to be sent.';
-            // return view('mail.bulkSending', 
-            // ['contactRequests'=> $prospects, 
-            // 'queued'=> $queued]
-        //);
-    
-     
+        //    $queued = 'Bulk Emails has been added to email queue. Should have already been sent or is in the process to be sent.';
+        //     return view('mail.bulkSending', 
+        //     ['contactRequests'=> $prospects, 
+        //     'queued'=> $queued]
+        // );
+
+        return redirect('/emailConfirmation?type=queue'); 
        } 
    
    
@@ -84,4 +84,41 @@ class JobController extends Controller
     //     new VerificationEmail,
     //     new WelcomeEmail
     // ])->dispatch();
+    
+
+    public function confirmationPage(){
+
+        $confirmationMessage = $_GET['type'];
+
+
+        if(isset($confirmationMessage)){
+
+            if($confirmationMessage == 'queue'){
+
+                $confirmationMessage = 'Bulk Emails has been added to email queue. Should have already been sent or is in the process to be sent. Allow up to 45 minutes for all of them to be sent.';
+            }
+
+            else if($confirmationMessage == 'single'){
+                $confirmationMessage = 'Message has been sent';
+            }
+            else {
+                $confirmationMessage = 'error';   
+            }    
+        }
+
+        else {
+            $confirmationMessage = 'error';   
+        }
+    
+        
+        return view('mail.emailConfirmation', 
+            
+            ['confirmationMessage'=> $confirmationMessage ]
+            
+        );
+    
+    }
+
 }
+
+

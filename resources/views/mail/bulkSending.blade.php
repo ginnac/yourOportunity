@@ -4,13 +4,6 @@
 
 
 <div class="title m-b-md">
-                @isset($queued)
-                    <ul>
-                        <li>
-                            {{$queued}}
-                        </li>
-                    </ul>
-                @endisset
 
                     <div class="row">
                         <div class="col">
