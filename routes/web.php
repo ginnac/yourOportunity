@@ -61,3 +61,7 @@ Route::post('/sendEmails', 'JobController@sendEmails');
 Route::get('/sendEmail', 'JobController@enqueue');
 
 Route::get('/emailConfirmation', 'JobController@confirmationPage');
+
+//user profile routes to allow user upload a profile picture
+Route::get('/profile', 'ProfileController@index')->name('profile');
+Route::post('/profile/update', 'ProfileController@updateProfile')->name('profile.update');
