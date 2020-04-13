@@ -97,7 +97,7 @@ class JobController extends Controller
         'message' => $request->get('message')];
         SendEmail::dispatch($details);
         
-        return redirect('/contact_request_reports/' . $id);
+        return redirect('emailConfirmation?type=single&id=' . $id);
     }
 
 
