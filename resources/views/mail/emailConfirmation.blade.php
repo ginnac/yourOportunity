@@ -25,14 +25,21 @@
 
     <div class="row bg-dark text-white rounded mt-5 mr-3 ml-3">
         <div class="col">
+
+        @if(isset($id))
+            <div class="p-2 ">
+                <a class='btn btn-secondary btnsize' href="/contact_request_reports/{{$id}}">Back to Profile</a>
+            </div>  
+        @else
             <div class="p-2 ">
                 <a class='btn btn-secondary btnsize' href="/sendEmails">Back</a>
             </div>  
+        @endif
         </div>
 
         <div class="col">
             <div class="p-2">
-                <a class='btn btn-primary btnsize float-right' href="/contact_request_reports">Home</a>
+                <a class='btn btn-primary btnsize float-right' href="/contact_request_reports">Back Home</a>
             </div>
         </div>
     </div>

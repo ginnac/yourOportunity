@@ -104,6 +104,7 @@ class JobController extends Controller
     public function confirmationPage(){
 
         $confirmationMessage = $_GET['type'];
+        $id =$_GET['id'];
 
 
         if(isset($confirmationMessage)){
@@ -128,7 +129,8 @@ class JobController extends Controller
         
         return view('mail.emailConfirmation', 
             
-            ['confirmationMessage'=> $confirmationMessage ]
+            ['confirmationMessage'=> $confirmationMessage,
+            'id'=>$id ]
             
         );
     
