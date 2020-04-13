@@ -9,16 +9,12 @@
                             <h1 class="float-right text-white-50 font-weight-bold"> Contact Details for {{$report->name}}</h1>
                         </div>
                     </div>
-                    <div class="row mt-3">
+                    <div class="row mt-5">
                         <div class="col">
                             <a class='btn btn-dark float-right' href="/contact_request_reports">Back To Contact List</a>
                         </div>
                     </div>
-                    <div class="row mt-2">
-                        <div class="col">
-                            <a class='btn btn-info float-right' href="/contact_request_reports/{{$report->id}}/confirmSendMail">Send Email</a>
-                        </div>
-                    </div>
+                   
                     <div class="row">
                         <div class="col">
                             <h3 class="mt-5">Prospect Details</h3>
@@ -50,7 +46,23 @@
                             
                              </table>
 
+                        
+                       
+                        <div class="row mt-2 mb-4">
+                                <div class="col-6">
+                                    
+                                </div>
+                                <div class="col">
+                                    <a class='btn btn-info float-right' href="/contact_request_reports/{{$report->id}}/confirmSendMail">Send Email</a>
+                                </div>
+
+                                <div class="col">
+                                    <a class='btn btn-info float-right' href="/contact_request_reports/{{$report->id}}/confirmSendMail">Send SMS</a>
+                                </div>
                         </div>
+
+                        </div>
+                        
                     </div>
                     <div class="row mt-5">
                         <div class="col">

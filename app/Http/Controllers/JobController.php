@@ -84,7 +84,22 @@ class JobController extends Controller
     //     new VerificationEmail,
     //     new WelcomeEmail
     // ])->dispatch();
+
     
+    public function sendOneMail(Request $request, $id)
+    {
+        $report = ContactRequestReport::find($id);
+        $email = $report->email;
+        //Mail::to($request->get('email'))->send(new SummaryReport($report));
+        
+        $details = ['email' => $email,
+        'subject' => 'Loca!!',
+        'message' => 'Familia'];
+        SendEmail::dispatch($details);
+        
+        return redirect('/contact_request_reports/' . $id);
+    }
+
 
     public function confirmationPage(){
 

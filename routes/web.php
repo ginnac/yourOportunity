@@ -30,7 +30,7 @@ Route::get('/contact_request_reports/{contact_request_report}/notes/create', 'No
 Route::post('/contact_request_reports/{contact_request_report}/notes', 'NoteController@store');
 
 Route::get('/contact_request_reports/{id}/confirmSendMail', 'ContactRequestReportController@confirmSendMail');
-Route::post('/contact_request_reports/{id}/sendMail', 'ContactRequestReportController@sendMail');
+Route::post('/contact_request_reports/{id}/sendMail', 'JobController@sendOneMail');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
