@@ -51,7 +51,7 @@ class JobController extends Controller
         //     'queued'=> $queued]
         // );
 
-        return redirect('/emailConfirmation?type=queue'); 
+        return redirect('/emailConfirmation?type=queue&id=none'); 
        } 
    
    

@@ -70,7 +70,7 @@ class smsController extends Controller
                            ) 
                   ); 
  
-        print($message->sid);
+            print($message->sid);
             return back()->with("1 messages sent successfully!" );
        }
        
