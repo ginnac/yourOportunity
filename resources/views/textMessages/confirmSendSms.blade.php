@@ -23,7 +23,7 @@
         @endif
         </ul>
           
-          <h2 class="font-weight-bold">Send text Messages for {{$report->name}}</h2>
+          <h2 class="font-weight-bold">Send text Messages to {{$report->name}}</h2>
 
           <div class="col">
                <a class="btn btn-secondary float-right" href="/contact_request_reports/{{$report->id}}">Cancel</a>
