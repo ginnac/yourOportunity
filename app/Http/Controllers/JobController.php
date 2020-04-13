@@ -93,8 +93,8 @@ class JobController extends Controller
         //Mail::to($request->get('email'))->send(new SummaryReport($report));
         
         $details = ['email' => $email,
-        'subject' => 'Loca!!',
-        'message' => 'Familia'];
+        'subject' => $request->get('subject'),
+        'message' => $request->get('message')];
         SendEmail::dispatch($details);
         
         return redirect('/contact_request_reports/' . $id);
