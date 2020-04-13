@@ -57,7 +57,7 @@
                                 </div>
 
                                 <div class="col">
-                                    <a class='btn btn-info float-right' href="/contact_request_reports/{{$report->id}}/confirmSendMail">Send SMS</a>
+                                    <a class='btn btn-info float-right' href="/contact_request_reports/{{$report->id}}/oneTextSms">Send SMS</a>
                                 </div>
                         </div>
 

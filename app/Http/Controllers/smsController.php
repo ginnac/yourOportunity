@@ -20,49 +20,50 @@ class smsController extends Controller
 // see https://getcomposer.org/doc/01-basic-usage.md 
 //require_once '/path/to/vendor/autoload.php'; 
 
-public function index()
-{
-    $contactRequests = ContactRequestReport::all();
-    $numberList = array();
-    foreach($contactRequests as $contactRequest){
-         $number=$contactRequest->phone_number;
-        array_push($numberList, $number);
+    public function index()
+    {
+        $contactRequests = ContactRequestReport::all();
+        $numberList = array();
+        foreach($contactRequests as $contactRequest){
+            $number=$contactRequest->phone_number;
+            array_push($numberList, $number);
+        }
+        $comma_separated_list = implode(",", $numberList);
+        //dd($comma_separated_list);
+        $view_list=implode(", ", $numberList);
+    
+    
+        //show all data
+        return view('textMessages.sms', 
+            ['contactRequests'=>ContactRequestReport::all(),
+            'bulkNumbers'=>$comma_separated_list,
+            'viewNumbers'=>$view_list]);
     }
-    $comma_separated_list = implode(",", $numberList);
-    //dd($comma_separated_list);
-    $view_list=implode(", ", $numberList);
-    
-    
-    //show all data
-    return view('textMessages.sms', 
-    ['contactRequests'=>ContactRequestReport::all(),
-    'bulkNumbers'=>$comma_separated_list,
-    'viewNumbers'=>$view_list]
-);
-}
 
- 
-
- 
-
+    public function confirmSendSms($id){
+        $report = ContactRequestReport::findOrFail($id);
+       return view('textMessages.confirmSendSms',[
+           'report'=>$report
+       ]);
+    }
 
     public function oneText(Request $request){
 
-        $sid=env('TWILIO_ACCOUNT_SID');
-        $token=env('TWILIO_AUTH_TOKEN');
+        $sid    = env( 'TWILIO_ACCOUNT_SID' );
         $number = env( 'TWILIO_NUMBER' );
+        $token  = env( 'TWILIO_AUTH_TOKEN' );
         
         $twilio = new Client($sid, $token);
 
         $validator = Validator::make($request->all(), [
-            'numbers' => 'required',
+            'number' => 'required',
             'message' => 'required'
         ]);
         
-        //if ( $validator->passes() ) {
+        if ( $validator->passes() ) {
 
             $message = $twilio->messages 
-                  ->create($request->input('numbers'), // to 
+                  ->create($request->input('number'), // to 
                            array( 
                                "from" => $number,       
                                "body" => $request->input( 'message' )
@@ -70,10 +71,12 @@ public function index()
                   ); 
  
         print($message->sid);
-
-       // }else {
+            return back()->with("1 messages sent successfully!" );
+       }
+       
+       else {
             return back()->withErrors( $validator );
-       // }
+       }
 
     }
 
