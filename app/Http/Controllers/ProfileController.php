@@ -75,7 +75,7 @@ class ProfileController extends Controller
         
    public function index()
    {
-      $url = 'https://s3.' . env('AWS_DEFAULT_REGION') . '.amazonaws.com/' . env('AWS_BUCKET') . '/';
+        $url = 'https://s3.' . env('AWS_DEFAULT_REGION') . '.amazonaws.com/' . env('AWS_BUCKET') . '/';
     //    $images = [];
     //    $files = Storage::disk('s3')->files('images');
     //        foreach ($files as $file) {
@@ -86,7 +86,7 @@ class ProfileController extends Controller
     //        }
     //    return view('welcome', compact('images'));
 
-    return view('auth.profile', ['url' => $url]);
+        return view('auth.profile', ['url' => $url]);
    }
 
    public function store(Request $request)
