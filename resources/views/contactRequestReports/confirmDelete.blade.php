@@ -6,25 +6,37 @@
 
                     <div class="row">
                         <div class="col">
-                            <h1 class="text-white font-weight-bold">Delete Contact</h1>
+                            <h1 class="float-right text-white-50 font-weight-bold">Delete Contact Page</h1>
                         </div>
                     </div>
-                    <div class="row mb-2">
+
+                    <div class="row bg-dark mt-5 pt-2 pb-5">
+                    
+
+                    <div class="row mt-2 w-100">
                         <div class="col">
-                            <a class='btn btn-dark ml-2' href="/contact_request_reports">No, Back To Contact List</a>
+                            <h4 class="text-white text-center font-weight-bold ml-2">Are you sure you want to delete {{$report->name}} from the contacts list?</h4>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col">
-                            <table class="table table mt-2 mb-3">
+                  
+                    <div class="row w-100 mt-3 mb-2">
+                        <div class="col-6 w-100 ">
+                            <a class='btn btn-primary ml-3 w-100' href="/contact_request_reports">No, Back To Contact List</a>
+                        </div>
+                        <div class="col-6 w-100">
+                            <table class="table table">
                                 <form action="/contact_request_reports/{{$report->id}}" method="POST">
                                     @csrf
                                     @method('delete')
-                                    <button type="submit" class="ml-3 font-weight-bold btn btn-primary btnsize">Yes, Please Delete</button>
+                                    <button type="submit" class="w-100 ml-3 font-weight-bold btn btn-danger btnsize">Yes, Please Delete</button>
                                 </form>
                             </table>
                         </div>
                     </div>
+
+                    <div>
+                    
+
                             
                                 
                            
