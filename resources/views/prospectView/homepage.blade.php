@@ -35,22 +35,25 @@
                         @endisset
                         </div>
                     </div>
-                    <div class="d-flex flex-column flex-md-row">
+                    <div class="d-flex flex-column flex-md-row mt-4 mb-4">
                         <div class="col-md-8 p-2">
                         <iframe class="w-100 h-100" src="https://www.youtube.com/embed/tQxaEIeVH0Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                         <div class="p-2 d-flex flex-column">
-                        <div class="p-2">
-                        <iframe class="w-100" src="https://www.youtube.com/embed/tQxaEIeVH0Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        <div class="p-2">
-                        <iframe class="w-100" src="https://www.youtube.com/embed/tQxaEIeVH0Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        </div>
-                        </div>
-                        
+                            <div class="p-2">
+                                <iframe class="w-100" src="https://www.youtube.com/embed/tQxaEIeVH0Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="p-2">
+                                <iframe class="w-100" src="https://www.youtube.com/embed/tQxaEIeVH0Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>   
                     </div>
-                    <div class="row">
+
+                    <div class="row mb-5 bg-dark pt-4 pb-5">
+                
                         <div class="col">
+                            <h4 class="mb-2 text-secondary text-right mr-3">For more information, fill out this form</h4>
+                            
                             <form action="/opportunity" method="POST">
                                     @csrf
                                     <div class="form-group">
@@ -68,7 +71,10 @@
                                         
                                         <input type="text" class="form-control" id="source" name="source" value="system" hidden> </input>
                                     </div>
-                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                    <div class="d-flex justify-content-center">
+                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                    </div>
+                                    
                             </form>
                         </div>
                     </div>
