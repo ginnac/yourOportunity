@@ -4,9 +4,9 @@
 
 <div class="title m-b-md">
 
-                    <div class="row">
-                        <div class="col">
-                            <h1>The opportunity of your life!</h1>
+                    <div class="row mt-5 mb-3">
+                        <div class="col w-100">
+                            <h1 class="text-center">The opportunity of your life!</h1>
                         </div>
                     </div>
                     <div class="row">
@@ -35,10 +35,19 @@
                         @endisset
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/tQxaEIeVH0Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="d-flex flex-column flex-md-row">
+                        <div class="col-md-8 p-2">
+                        <iframe class="w-100 h-100" src="https://www.youtube.com/embed/tQxaEIeVH0Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
+                        <div class="p-2 d-flex flex-column">
+                        <div class="p-2">
+                        <iframe class="w-100" src="https://www.youtube.com/embed/tQxaEIeVH0Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        <div class="p-2">
+                        <iframe class="w-100" src="https://www.youtube.com/embed/tQxaEIeVH0Q" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+                        </div>
+                        
                     </div>
                     <div class="row">
                         <div class="col">
