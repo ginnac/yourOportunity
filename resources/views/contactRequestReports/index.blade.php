@@ -7,7 +7,7 @@
 
                     <div class="row">
                         <div class="col">
-                            <h1 class="font-weight-bold">Contact Lists</h1>
+                         <h1 class="font-weight-bold">Prospects List <i class="fa fa-list"></i></h1>
                         </div>
                     </div>
                     <div class="mt-2 mb-4 d-flex flex-row-reverse">
@@ -15,10 +15,10 @@
                             <a class='btn btn-primary btnsize' href="/contact_request_reports/create">Create A New Contact</a>
                         </div>
                         <div class="p-2">
-                            <a class='btn btn-primary btnsize' href="/sendEmails">Send Bulk Emails</a>
+                            <a class='btn btn-primary btnsize' href="/sendEmails">Bulk send Email to All</a>
                         </div>
                         <div class="p-2">
-                            <a class='btn btn-primary btnsize' href="/textsms">Send Bulk Text Messages</a>
+                            <a class='btn btn-primary btnsize' href="/textsms">Bulk send Text Messages to All</a>
                         </div>
                         
                     </div>

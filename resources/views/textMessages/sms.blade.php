@@ -23,25 +23,25 @@
         @endif
         </ul>
           
-          <h2 class="font-weight-bold">Bulk Send text Messages</h2>
+          <h2 class="font-weight-bold">Bulk Send Text Messages<i class="fa fa-comment ml-1"></i></h2>
 
           <div class="col">
                <a class="btn btn-secondary float-right" href="/contact_request_reports">Cancel</a>
           </div>
 
-          <label class="mt-4 font-weight-bold"> Sending to:</label>
+          <label class="mt-4 font-weight-bold"> Sending to all contacts:</label>
           <input type="text" name='numbers' value="{{$bulkNumbers}}" class=form-control id="numbers" name="numbers" hidden>
           <p>{{$viewNumbers}}</p>
           </input> 
           
 
-          <label class="mt-3 font-weight-bold">Message:</label>
+          <label class="mt-3 font-weight-bold">Enter Message:</label>
           <textarea name='message' class="w-100 form-control" rows="12"></textarea>
 
           <div class="row mt-4">
                
-               <div class="col">
-                    <button class="btn btn-primary font-weight-bold" type='submit' >Send Bulk Text Message</button>
+               <div class="col d-flex justify-content-end mr-3">
+                    <button class="btn btn-primary font-weight-bold" type='submit' >Send</button>
                </div>
 
                

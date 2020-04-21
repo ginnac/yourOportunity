@@ -14,6 +14,9 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -22,10 +25,10 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app bg-secondary">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <div id="app">
+        <nav class="navbar navbar-expand-md navbar-light bg-dark shadow-sm">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
+                <a class="navbar-brand text-light" href="{{ url('/contact_request_reports') }}">
                     <!-- {{ config('app.name', 'Laravel') }} -->
                     Your Opportunity
                 </a>
@@ -36,8 +39,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
-                        <li>
+                        <li class="ml-3">
                         <a href="/contact_request_reports">Contact List</a>
+                        </li>
+                        <li class="ml-3">
+                        <a href="/">Prospect View</a>
                         </li>
                     </ul>
 
@@ -58,16 +64,16 @@
 
                                 <!-- Development: rendering locally switch src to "{{asset('storage'.auth()->user()->image)}}"  -->
                                 <!-- Production: Browser rendering switch src to "{{asset(auth()->user()->image)}}" -->
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     @if (auth()->user()->image)
                                     <img src="https://opportunity-application.s3.us-east-2.amazonaws.com/{{auth()->user()->image}}" style="width: 40px; height: 40px; border-radius: 50%;">
                                     @endif
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
 
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('profile') }}">Profile</a>
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item text-light" href="{{ route('profile') }}">Profile</a>
+                                    <a class="dropdown-item text-danger" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
