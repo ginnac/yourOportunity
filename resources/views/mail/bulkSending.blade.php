@@ -7,7 +7,7 @@
 
                     <div class="row">
                         <div class="col">
-                            <h1 class="mt-2 float-right font-weight-bold">Send Email To Prospects</h1>
+                            <h1 class="mt-2 float-right font-weight-bold">Send Email To All Prospects <i class="fa fa-envelope ml-1"></i></h1>
                         </div>
                     </div>
                     <div class="row">
@@ -75,7 +75,7 @@
                         <div class="row mt-4 mb-3">
                
                         <div class="col">
-                            <button class="btn btn-primary font-weight-bold" type='submit' >Send Bulk Email</button>
+                            <button class="btn btn-primary font-weight-bold" type='submit' >Bulk Send Email</button>
                         </div>
 
                

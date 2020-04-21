@@ -6,12 +6,12 @@
 
                     <div class="row">
                         <div class="col">
-                            <h1 class="float-right text-white-50 font-weight-bold">Add New Contact</h1>
+                            <h1 class="float-right text-white-50 font-weight-bold">Add New Contact <i class="fa fa-user-plus"></i></h1>
                         </div>
                     </div>
                     <div class="row mt-3">
                         <div class="col">
-                            <a class='btn btn-dark float-right' href="/contact_request_reports">Back To Contact List</a>
+                            <a class='btn btn-dark float-right' href="/contact_request_reports"><i class="fa fa-home"></i> Home</a>
                         </div>
                     </div>
                     <div class="row mt-4">
@@ -45,7 +45,7 @@
                                         
                                         <input type="text" class="form-control mb-3" id="source" name="source" value="{{Auth::user()->name}}" hidden> Created by {{ Auth::user()->name }} </input>
                                     </div>
-                                    <button type="submit" class="btn btn-primary mt-2 font-weight-bold btnsize">Submit</button>
+                                    <button type="submit" class="btn btn-primary mt-2 font-weight-bold btnsize"><i class="fa fa-save"></i> Save</button>
                                 </form>
                             </table>
                         </div>

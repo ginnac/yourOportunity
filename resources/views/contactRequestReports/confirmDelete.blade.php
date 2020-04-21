@@ -6,7 +6,7 @@
 
                     <div class="row">
                         <div class="col">
-                            <h1 class="float-right text-white-50 font-weight-bold">Delete Contact Page</h1>
+                            <h1 class="float-right text-white-50 font-weight-bold">Delete Contact Page <i class="fa fa-trash"></i></h1>
                         </div>
                     </div>
 

@@ -6,18 +6,18 @@
 
                     <div class="row">
                         <div class="col">
-                            <h1 class="float-right text-white-50 font-weight-bold"> Contact Details for {{$report->name}}</h1>
+                            <h1 class="float-right text-white-50 font-weight-bold"> {{$report->name}} <i class="fa fa-id-card"></i></h1>
                         </div>
                     </div>
                     <div class="row mt-5">
                         <div class="col">
-                            <a class='btn btn-dark float-right' href="/contact_request_reports">Back To Contact List</a>
+                            <a class='btn btn-dark float-right' href="/contact_request_reports"><i class="fa fa-home"></i> Home</a>
                         </div>
                     </div>
                    
                     <div class="row">
                         <div class="col">
-                            <h3 class="mt-5">Prospect Details</h3>
+                            <h3 class="mt-5">Prospect Details <i class="fa fa-info-circle"></i></h3>
                              <table class="table table-responsive-sm">
                              <thead class="thead-dark">
                                     <tr>
@@ -48,16 +48,16 @@
 
                         
                        
-                        <div class="row mt-2 mb-4">
+                        <div class="row mt-2 mb-4 d-flex justify-content-end">
                                 <div class="col-6">
                                     
                                 </div>
-                                <div class="col">
-                                    <a class='btn btn-info float-right' href="/contact_request_reports/{{$report->id}}/confirmSendMail">Send Email</a>
+                                <div class="col d-flex justify-content-end">
+                                    <a class='btn btn-info' href="/contact_request_reports/{{$report->id}}/confirmSendMail">Send Email <i class="fa fa-envelope"></i></a>
                                 </div>
 
-                                <div class="col">
-                                    <a class='btn btn-info float-right' href="/contact_request_reports/{{$report->id}}/oneTextSms">Send SMS</a>
+                                <div class="col d-flex justify-content-end">
+                                    <a class='btn btn-info' href="/contact_request_reports/{{$report->id}}/oneTextSms">Send SMS <i class="fa fa-comment"></i></a>
                                 </div>
                         </div>
 
@@ -66,7 +66,7 @@
                     </div>
                     <div class="row mt-5">
                         <div class="col">
-                           <h3>Contact Notes</h3>
+                           <h3>Contact Notes <i class="fa fa-clipboard"></i></h3>
                             <table class="table table-hover table-responsive-sm">
                                 <thead class="thead-dark">
                                     <tr>
@@ -88,7 +88,7 @@
                     </div>
                     <div class="row">
                             <div class="col">
-                                <a class='btn btn-primary font-weight-bold btnsize' href="/contact_request_reports/{{$report->id}}/notes/create">New Note</a>
+                                <a class='btn btn-success font-weight-bold btnsize' href="/contact_request_reports/{{$report->id}}/notes/create"><i class="fa fa-plus"></i> New Note</a>
                             </div>
                         </div>
                                 

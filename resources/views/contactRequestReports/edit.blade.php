@@ -6,12 +6,12 @@
 
                     <div class="row">
                         <div class="col">
-                            <h1 class="float-right text-white-50 font-weight-bold">Edit Contact Details for {{$report->name}}</h1>
+                            <h1 class="float-right text-white-50 font-weight-bold">Edit Contact Details for {{$report->name}} <i class="fa fa-edit"></i></h1>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col">
-                            <a class='btn btn-dark float-right' href="/contact_request_reports">Back to Contact List</a>
+                        <div class="col d-flex justify-content-end mt-3 mb-3">
+                            <a class='btn btn-dark' href="/contact_request_reports"><i class="fa fa-home"></i> Home</a>
                         </div>
                     </div>
                     <div class="row">
@@ -32,7 +32,7 @@
                                         <label class="font-weight-bold" for="email">Email:</label>
                                         <input type="text" value="{{$report->email}}" class=form-control id="email" name="email" placeholder="Enter Contact's Email">
                                     </div>
-                                    <button type="submit" class="btn btn-primary mt-2 font-weight-bold btnsize">Submit</button>
+                                    <button type="submit" class="btn btn-primary mt-2 font-weight-bold btnsize"><i class="fa fa-save"></i> Save</button>
                                 </form>
                             </table>
                         </div>
