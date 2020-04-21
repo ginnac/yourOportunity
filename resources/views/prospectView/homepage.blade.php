@@ -6,7 +6,7 @@
 
                     <div class="row mt-4 mb-3">
                         <div class="col w-100">
-                            <h1 class="text-center">The opportunity of your life!</h1>
+                            <h1 class="text-center">The Opportunity of your Life <i class="fa fa-exclamation" style="font-size:40px;color:silver;"></i></h1>
                         </div>
                     </div>
                     <div class="row">
@@ -49,7 +49,7 @@
                         </div>   
                     </div>
 
-                    <div class="row mb-5 bg-dark pt-4 pb-5">
+                    <div class="row bg-dark pt-4 pb-5">
                 
                         <div class="col">
                             <h4 class="mb-2 text-secondary text-right mr-3">For more information, fill out this form</h4>
@@ -60,25 +60,27 @@
                                         <label for="name">Name:</label>
                                         <input type="text" value="{{old('name')}}" class=form-control id="name" name="name" placeholder="Type your Name">
                                         
-                                        <label for="email">Email:</label>
+                                        <label class="mt-2" for="email">Email:</label>
                                         <input type="email" value="{{old('email')}}" class=form-control id="email" name="email" placeholder="Type your Email">
 
-                                        <label  for="phone_number">Phone Number:</label>
+                                        <label class="mt-2" for="phone_number">Phone Number:</label>
                                         <input type="number" value="{{old('phone_number')}}" class=form-control id="phone_number" name="phone_number" placeholder="Type Your Mobile Phone Number">
 
-                                        <label  for="comments">Comments:</label>
+                                        <label class="mt-2" for="comments">Comments:</label>
                                         <input type="text" value="{{old('comments')}}" class=form-control id="comments" name="comments" placeholder="Leave Your Comments Here">
                                         
                                         <input type="text" class="form-control" id="source" name="source" value="system" hidden> </input>
                                     </div>
                                     <div class="d-flex justify-content-center">
-                                            <button type="submit" class="btn btn-primary">Submit</button>
+                                            <button type="submit" class="btn btn-primary mt-2">Submit</button>
                                     </div>
                                     
                             </form>
                         </div>
                     </div>
                             
+                    <footer class="divFooter">
+                    </footer>
                                 
                            
 </div>

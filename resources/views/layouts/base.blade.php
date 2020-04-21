@@ -12,8 +12,20 @@
     <title>Contact Requests Admin</title>
     <style>
       .btnsize {
-      font-size: 17px;
+        font-size: 17px;
       }
+
+     
+      .divFooter {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background-color: red;
+        color: white;
+        text-align: center;
+      }
+</style>
 
 </style>
   </head>
