@@ -28,7 +28,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-dark shadow-sm">
             <div class="container">
-                <a class="navbar-brand text-light" href="{{ url('/contact_request_reports') }}">
+                <a class="navbar-brand text-light" href="{{ url('/home') }}">
                     <!-- {{ config('app.name', 'Laravel') }} -->
                     Your Opportunity
                 </a>

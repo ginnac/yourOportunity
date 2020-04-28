@@ -14,13 +14,22 @@
                         </div>
                     @endif
                     <div>
+
+                        <img class="ml-3 float-left" src="https://opportunity-application.s3.us-east-2.amazonaws.com/{{auth()->user()->image}}" style="width: 150px; height: 150px; border-radius: 50%;"/>
                         
-                        <h3> Welcome Back {{ Auth::user()->name }}! </h3>
+                        <div class="float-left text-success mt-2">
+                            <h3> Welcome Back {{ Auth::user()->name }}! </h3>
                         
-                        <p class="ml-3">
-                        {{ Auth::user()->email}}
-                        </p>
-                        <img class="ml-3" src="https://opportunity-application.s3.us-east-2.amazonaws.com/{{auth()->user()->image}}" style="width: 150px; height: 150px; border-radius: 50%;"/>
+                            <h6 class="ml-3 mt-2">
+                                {{ Auth::user()->email}}
+                            </h6>
+
+                            <p class="ml-3 mt-5 text-secondary">
+                                User since {{ date_format(Auth::user()->created_at,"M, d Y")}}
+                            </p>
+                        </div>
+                        
+                        
                     
                     </div>
                 </div> 
@@ -40,7 +49,7 @@
                     <ul>
                         
                         <li class="ml-3">
-                            <a href="/register">Register</a>
+                            <a href="/profile">Profile</a>
                         </li>
                         <li class="ml-3">
                             <a href="/">Prospect View</a>
