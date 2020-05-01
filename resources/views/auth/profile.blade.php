@@ -49,7 +49,8 @@
                                             <div class="col-md-6">
                                                 <input id="profile_image" type="file" class="form-control-file" name="profile_image">
                                                 @if (auth()->user()->profile_image)
-                                                    <code>{{ auth()->user()->profile_image}}</code>
+                                                    <!-- <code>{{ auth()->user()->profile_image}}</code> -->
+                                                    <img class="mt-3 mb-3 float-left" src="https://opportunity-application.s3.us-east-2.amazonaws.com/{{auth()->user()->image}}" style="width: 150px; height: 150px; border-radius: 50%;"/>
                                                 @endif
                                             </div>
                                         </div>
