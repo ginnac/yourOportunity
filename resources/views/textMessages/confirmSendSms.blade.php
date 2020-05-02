@@ -3,7 +3,7 @@
 
 @section('content')
 
-<div class="mt-4 p-5 mb-5 bg-light text-dark border">
+<div class="mt-5 p-5 mb-5 bg-light text-dark border border-white rounded">
          <form action='' method='post' class="form-group">
               @csrf
         @if($errors->any())
@@ -25,11 +25,11 @@
           
           <div class="row">
                <div class="col-xs-12 col-md-6">
-                    <h2 class="font-weight-bold">Send text Messages to {{$report->name}}</h2>
+                    <h2 class="font-weight-bold">Send Text Messages to {{$report->name}}</h2>
                </div>
 
                <div class="col-md-6">
-                    <a class="btn btn-secondary float-right" href="/contact_request_reports/{{$report->id}}">Cancel</a>
+                    <a class="btn btn-secondary float-right" href="/contact_request_reports/{{$report->id}}"><i class="fa fa-times"></i></a>
                </div>
           
           </div>
