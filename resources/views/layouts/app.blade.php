@@ -94,8 +94,13 @@
             <div class="container">
             @stack('scripts')
                 @yield('content')
-            </div>  
+            </div> 
         </main>
+        <footer class="fixed-bottom w-100 bg-dark mt-5 d-flex justify-content-center" style="height:50px; margin: 0 auto">
+            <a  class="pt-3 text-white-50" style="text-decoration: none;" href="https://github.com/ginnac/yourOportunity"> <img class="" style="width:35px; height:30px" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.iconsdb.com%2Ficons%2Fpreview%2Fwhite%2Fgithub-6-xxl.png&f=1&nofb=1" alt="Github Site"></img> Ginna Campbell</a>
+                
+        </footer>
     </div>
+    
 </body>
 </html>
