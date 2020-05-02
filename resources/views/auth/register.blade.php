@@ -2,9 +2,9 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center d-flex align-items-stretch">
         <div class="col-md-9">
-            <div class="card mb-4 pb-3">
+            <div class="card mb-4 pb-3 h-100">
                 <div class="card-header bg-dark text-white">{{ __('Register') }}</div>
 
                 <div class="card-body">
@@ -73,7 +73,7 @@
             </div>
         </div>
         <div class="col-md-3">
-            <div class="card mb-4 pb-3">
+            <div class="card mb-4 pb-3 h-100">
                 <div class="card-header bg-dark text-white">Quick Links</div>
                 <div class="card-body">
                     <ul>
