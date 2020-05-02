@@ -60,7 +60,14 @@
                         
                     <div class="row pr-5 pl-5 pt-3 pb-5 bg-secondary text-white border" >
                         
-                        <div class="w-100 mt-3"><h2>Build your Email</h2></div>
+                        <div class="row w-100">
+                            <div class="col-6">
+                                <div class="mt-3 mb-3"><h2>Build your Email</h2></div>
+                            </div>
+                            <div class="col-6">
+                                <a class="btn btn-danger float-right mt-3 mb-3" href="/contact_request_reports"><i class="fa fa-times"></i></a>
+                            </div>
+                        </div>
                         
                         <!-- <div class="row" class="w-100"> -->
                             <label class="mt-3">Subject</label>
@@ -72,9 +79,9 @@
                             <textarea class="w-100 form-control" name='message' rows="12"></textarea>
                         <!-- </div> -->
                         
-                        <div class="row mt-4 mb-3">
+                        <div class="row mt-4 mb-3 w-100">
                
-                        <div class="col">
+                        <div class="col w-100">
                             <button class="btn btn-primary font-weight-bold" type='submit' >Bulk Send Email</button>
                         </div>
 
