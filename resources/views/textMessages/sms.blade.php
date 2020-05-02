@@ -22,16 +22,16 @@
             </li> 
         @endif
         </ul>
-          
-          <h2 class="font-weight-bold">Bulk Send Text Messages<i class="fa fa-comment ml-1"></i></h2>
+           
+          <h2 class="font-weight-bold">Bulk Send Text Messages <i class="fa fa-comment ml-1"></i></h2>
 
           <div class="col">
-               <a class="btn btn-secondary float-right" href="/contact_request_reports">Cancel</a>
+               <a class="btn btn-secondary float-right" href="/contact_request_reports"><i class="fa fa-times"></i></a>
           </div>
 
-          <label class="mt-4 font-weight-bold"> Sending to all contacts:</label>
-          <input type="text" name='numbers' value="{{$bulkNumbers}}" class=form-control id="numbers" name="numbers" hidden>
-          <p>{{$viewNumbers}}</p>
+          <label class="mt-4 font-weight-bold text-danger"> Sending to all contacts:</label>
+          <input type="text" name='numbers' value="{{$bulkNumbers}}" class="form-control" id="numbers" name="numbers" hidden>
+          <p class="text-danger">{{$viewNumbers}}</p>
           </input> 
           
 
@@ -41,7 +41,7 @@
           <div class="row mt-4">
                
                <div class="col d-flex justify-content-end mr-3">
-                    <button class="btn btn-primary font-weight-bold" type='submit' >Send</button>
+                    <button class="btn btn-primary font-weight-bold" type='submit' >Send To All</button>
                </div>
 
                
