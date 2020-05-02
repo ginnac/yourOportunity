@@ -31,8 +31,16 @@
                                 <form action="/contact_request_reports" method="POST">
                                     @csrf
                                     <div class="form-group">
-                                        <label class="font-weight-bold" for="name">Name:</label>
-                                        <input type="text" value="{{old('name')}}" class="form-control mb-3" id="name" name="name" placeholder="Type Contact Name">
+                                        <div class="row">
+                                            <div class="col-xs-2 col-md-1">
+                                                <label class="font-weight-bold" for="name">Name:</label>
+                                            </div>
+                                            <div class="col-xs-10 col-md-11">
+                                                <input type="text" value="{{old('name')}}" class="form-control mb-3" id="name" name="name" placeholder="Type Contact Name">
+                                            </div>
+                                        </div>
+                                        
+                                        
                                         
                                         <label class="font-weight-bold" for="email">Email:</label>
                                         <input type="email" value="{{old('email')}}" class="form-control mb-3" id="email" name="email" placeholder="Type Contact Email">

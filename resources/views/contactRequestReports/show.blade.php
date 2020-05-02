@@ -41,7 +41,7 @@
                                         <th scope="col" class="text-center">ID#</th>  
                                         <th scope="col" class="text-center">Phone Number</th>
                                         <th scope="col" class="text-center">Email</th>
-                                        <th scope="col" class="Text-Center">Initial Message</th>
+                                        <th scope="col" class="text-Center">Initial Message</th>
                                         <th scope="col" class="text-center">Source</th>
                                         <th scope="col" class="text-center">Created on</th>
                                         <th scope="col" class="text-center">Updated on</th>
